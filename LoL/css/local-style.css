@@ -1,0 +1,254 @@
+.slider {
+  /* default is width 400 and margin 10 */
+	width: 400;
+	margin: 10px;
+	position: relative;
+}
+
+p.Q1{
+	position: relative;
+	bottom: 1300px;
+}
+
+p.Q2{
+	position: relative;
+	bottom: 1300px;
+}
+
+.showbutton{
+	position: relative;
+	bottom: 1300px;
+}
+
+label{
+	position: relative;
+	bottom: 1300px;
+}
+
+#TopImage{
+	width: 50px;
+	position: relative;
+	bottom: 1507px;
+}
+
+#JungleImage{
+	width: 50px;
+	position: relative;
+	bottom: 1468px;
+}
+
+#MidImage{
+	width: 50px;
+	position: relative;
+	bottom: 1427px;
+}
+
+#BotImage{
+	width: 50px;
+	position: relative;
+	bottom: 1388px;
+}
+
+#SupportImage{
+	width: 50px;
+	position: relative;
+	bottom: 1348px;
+}
+
+#Blue1Image{
+	width: 80px;
+	position: relative;
+	right: 100px;
+
+}
+
+p.Blue1Image{
+	position: relative;
+	top: 40px;
+	margin: 0px;
+}
+
+#Blue2Image{
+	width: 80px;
+	position: relative;
+	left: 80px;
+}
+
+p.Blue2Image{
+	width: 80px;
+	position: relative;;
+	top: 50px;
+}
+
+#Blue3Image{
+	width: 80px;
+	position: relative;
+	left: 80px;
+}
+
+p.Blue3Image{
+	width: 80px;
+	position: relative;
+	top: 60px;
+}
+
+#Blue4Image{
+	width: 80px;
+	position: relative;
+	right: 100px;
+	left: 80px;
+}
+
+p.Blue4Image{
+	width: 80px;
+	position: relative;
+	top: 70px;
+}
+
+#Blue5Image{
+	width: 80px;
+	position: relative;
+	right: 100px;
+	left: 80px;
+}
+
+p.Blue5Image{
+	width: 80px;
+	position: relative;
+	top: 80px;
+}
+
+#Red1Image{
+	width: 80px;
+	position: relative;
+	left: 280px;
+
+}
+
+p.Red1Image{
+	width: 80px;
+	position: relative;
+	top: -460px;
+}
+
+#Red2Image{
+	width: 80px;
+	position: relative;
+	left: 280px;
+}
+
+p.Red2Image{
+	width: 80px;
+	position: relative;
+	bottom: 450px;
+}
+
+#Red3Image{
+	width: 80px;
+	position: relative;
+	left: 280px;
+}
+
+p.Red3Image{
+	width: 80px;
+	position: relative;
+	bottom: 440px;
+}
+
+#Red4Image{
+	width: 80px;
+	position: relative;
+	left: 280px;
+}
+
+p.Red4Image{
+	width: 80px;
+	position: relative;
+	bottom: 430px;
+}
+
+#Red5Image{
+	width: 80px;
+	position: relative;
+	left: 280px;
+}
+
+p.Red5Image{
+	width: 80px;
+	position: relative;
+	bottom: 420px;
+}
+
+p.Blue1Name{
+	position: relative;
+	right: 312px;
+	bottom: 930px;
+}
+
+p.Blue2Name{
+	position: relative;
+	right: 312px;
+	bottom: 865px;
+}
+
+p.Blue3Name{
+	position: relative;
+	right: 312px;
+	bottom: 795px;
+}
+
+p.Blue4Name{
+	position: relative;
+	right: 312px;
+	bottom: 730px;
+}
+
+p.Blue5Name{
+	position: relative;
+	right: 312px;
+	bottom: 660px;
+}
+
+p.Red1Name{
+	position: relative;
+	left: 308px;
+	bottom: 1142px;
+}
+
+p.Red2Name{
+	position: relative;
+	left: 308px;
+	bottom: 1075px;
+}
+
+p.Red3Name{
+	position: relative;
+	left: 308px;
+	bottom: 1007px;
+}
+
+p.Red4Name{
+	position: relative;
+	left: 308px;
+	bottom: 942px;
+}
+
+p.Red5Name{
+	position: relative;
+	left: 308px;
+	bottom: 872px;
+}
+
+p.BlueTeamLabel{
+	position: relative;
+	font-size: 30px;
+	right: 250px;
+	bottom: 1435px;
+}
+
+p.RedTeamLabel{
+	position: relative;
+	font-size: 30px;
+	left: 260px;
+	bottom: 1500px;
+}
