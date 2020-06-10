@@ -252,3 +252,33 @@ p.RedTeamLabel{
 	left: 260px;
 	bottom: 1500px;
 }
+
+p.hidden1{
+	position: relative;
+	bottom: 1300px;
+}
+
+p.hidden2{
+	position: relative;
+	bottom: 1300px;
+}
+
+table#multi_slider_table_Blue{
+	position: relative;
+	bottom: 1300px;
+}
+
+table#multi_slider_table_Red{
+	position: relative;
+	bottom: 1300px;
+}
+
+button.hidden2{
+	position: relative;
+	bottom: 1300px;
+}
+
+button.hidden1{
+	position: relative;
+	bottom: 1300px;
+}
