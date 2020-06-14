@@ -45,9 +45,9 @@
 // RedTeam[i] = AllChamps.slice(5,10);
 // }
 
-exp.PresentItems = []
+// exp.PresentItems = []
 
-exp.PresentItems = LoLStimuli
+// exp.PresentItems = LoLStimuli
 
 // exp.PresentItems[0] = {Blue: BlueTeam[0], Red: RedTeam[0]}
 
@@ -98,7 +98,7 @@ function make_slides(f) {
     /* trial information for this block
      (the variable 'stim' will change between each of these values,
       and for each of these, present_handle will be run.) */
-    present : exp.PresentItems,
+    present : LoLStimuli,
         // "bins" : [
         //   {
         //     "min" : 0,
@@ -140,30 +140,30 @@ function make_slides(f) {
       $(".BlueTeamLabel").html("Blue Team");
       $(".RedTeamLabel").html("Red Team");
 
-      $(".Blue1Name").html(exp.PresentItems[0].Blue[0].Name)
-      $(".Blue2Name").html(exp.PresentItems[0].Blue[1].Name)
-      $(".Blue3Name").html(exp.PresentItems[0].Blue[2].Name)
-      $(".Blue4Name").html(exp.PresentItems[0].Blue[3].Name)
-      $(".Blue5Name").html(exp.PresentItems[0].Blue[4].Name)
+      $(".Blue1Name").html(stim.Blue[0].Name)
+      $(".Blue2Name").html(stim.Blue[1].Name)
+      $(".Blue3Name").html(stim.Blue[2].Name)
+      $(".Blue4Name").html(stim.Blue[3].Name)
+      $(".Blue5Name").html(stim.Blue[4].Name)
 
 
-      $(".Red1Name").html(exp.PresentItems[0].Red[0].Name)
-      $(".Red2Name").html(exp.PresentItems[0].Red[1].Name)
-      $(".Red3Name").html(exp.PresentItems[0].Red[2].Name)
-      $(".Red4Name").html(exp.PresentItems[0].Red[3].Name)
-      $(".Red5Name").html(exp.PresentItems[0].Red[4].Name)
+      $(".Red1Name").html(stim.Red[0].Name)
+      $(".Red2Name").html(stim.Red[1].Name)
+      $(".Red3Name").html(stim.Red[2].Name)
+      $(".Red4Name").html(stim.Red[3].Name)
+      $(".Red5Name").html(stim.Red[4].Name)
 
-      $("#Blue1Image").html("<img src =\"" + exp.PresentItems[0].Blue[0].Image + "\" alt=\"Blue1\" id=\"Blue1Image\"></img>")
-      $("#Blue2Image").html("<img src =\"" + exp.PresentItems[0].Blue[1].Image + "\" alt=\"Blue2\" id=\"Blue2Image\"></img>")
-      $("#Blue3Image").html("<img src =\"" + exp.PresentItems[0].Blue[2].Image + "\" alt=\"Blue3\" id=\"Blue3Image\"></img>")
-      $("#Blue4Image").html("<img src =\"" + exp.PresentItems[0].Blue[3].Image + "\" alt=\"Blue4\" id=\"Blue4Image\"></img>")
-      $("#Blue5Image").html("<img src =\"" + exp.PresentItems[0].Blue[4].Image + "\" alt=\"Blue5\" id=\"Blue5Image\"></img>")
+      $("#Blue1Image").html("<img src =\"" + stim.Blue[0].Image + "\" alt=\"Blue1\" id=\"Blue1Image\"></img>")
+      $("#Blue2Image").html("<img src =\"" + stim.Blue[1].Image + "\" alt=\"Blue2\" id=\"Blue2Image\"></img>")
+      $("#Blue3Image").html("<img src =\"" + stim.Blue[2].Image + "\" alt=\"Blue3\" id=\"Blue3Image\"></img>")
+      $("#Blue4Image").html("<img src =\"" + stim.Blue[3].Image + "\" alt=\"Blue4\" id=\"Blue4Image\"></img>")
+      $("#Blue5Image").html("<img src =\"" + stim.Blue[4].Image + "\" alt=\"Blue5\" id=\"Blue5Image\"></img>")
 
-      $("#Red1Image").html("<img src =\"" + exp.PresentItems[0].Red[0].Image + "\" alt=\"Red1\" id=\"Red1Image\"></img>")
-      $("#Red2Image").html("<img src =\"" + exp.PresentItems[0].Red[1].Image + "\" alt=\"Red2\" id=\"Red1Image\"></img>")
-      $("#Red3Image").html("<img src =\"" + exp.PresentItems[0].Red[2].Image + "\" alt=\"Red3\" id=\"Red1Image\"></img>")
-      $("#Red4Image").html("<img src =\"" + exp.PresentItems[0].Red[3].Image + "\" alt=\"Red4\" id=\"Red1Image\"></img>")
-      $("#Red5Image").html("<img src =\"" + exp.PresentItems[0].Red[4].Image + "\" alt=\"Red5\" id=\"Red1Image\"></img>")
+      $("#Red1Image").html("<img src =\"" + stim.Red[0].Image + "\" alt=\"Red1\" id=\"Red1Image\"></img>")
+      $("#Red2Image").html("<img src =\"" + stim.Red[1].Image + "\" alt=\"Red2\" id=\"Red1Image\"></img>")
+      $("#Red3Image").html("<img src =\"" + stim.Red[2].Image + "\" alt=\"Red3\" id=\"Red1Image\"></img>")
+      $("#Red4Image").html("<img src =\"" + stim.Red[3].Image + "\" alt=\"Red4\" id=\"Red1Image\"></img>")
+      $("#Red5Image").html("<img src =\"" + stim.Red[4].Image + "\" alt=\"Red5\" id=\"Red1Image\"></img>")
 
 	this.sentence_types = ["Early", "Mid", "Late"];
       var sentences = {
@@ -208,7 +208,7 @@ function make_slides(f) {
     },
 
     showButton : function() {
-      if ($('input[type=radio]:checked').size() == 0) {
+      if ($('input[type=radio]:checked').size() <= 1) {
         $(".err_radio").show();
       } else {
         this.log_responses();
@@ -246,25 +246,39 @@ function make_slides(f) {
     },
 
     showButton2: function(){
-      if (exp.sliderPostBlue.length < this.n_sliders) {
-        $(".err").show();
-  		} else{
+      var ok_to_go_on = true
+      for (var i=0; i<this.n_sliders_Blue; i++) {
+        if (exp.sliderPostBlue[i]==undefined){
+          ok_to_go_on = false
+        }
+      }
+      if (ok_to_go_on) {  
   			this.log_responses();
   			$(".showButton2").hide();
   			$(".hidden2").show();
   			$(".err_slider").hide();
   		}
+  		else {
+  			$(".err_slider").show();
+  		}
     },
 
       button : function(){
-      if (exp.sliderPostRed == null){
-        $(".err_slider").show();
-      } else {
-                    var end_time = Date.now();
+      	var ok_to_go_on = true
+      	for (var i=0; i<this.n_sliders_Red; i++) {
+        if (exp.sliderPostRed[i]==undefined){
+          ok_to_go_on = false
+        }
+      }
+      if(ok_to_go_on){
+      	var end_time = Date.now();
         this.time_spent = end_time - this.start_time;
         this.log_responses();
         $(".showButton").show();
         _stream.apply(this); //make sure this is at the *end*, after you log your data
+      }
+      	else {
+           $(".err_slider").show();         
       }
     },
 

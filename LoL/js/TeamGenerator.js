@@ -1,5 +1,5 @@
 num_comps = 4
-scale_factor = 1.2
+scale_factor = 1.4
 
 var ChampArray = [
 {Name: "Aatrox", Image: "../_shared/images/champions/Aatrox.jpg"},
@@ -225,7 +225,7 @@ var BlueTeam = []
 var RedTeam = []
 var FinalChamps = []
 
-for(comps = 0; comps < num_comps+1; comps++){
+for(comps = 0; comps < num_comps; comps++){
 	if (!BlueTeam[comps]) {BlueTeam[comps] = []}
 	if (!RedTeam[comps]) {RedTeam[comps] = []}
 	var BanIndex = 0;
@@ -314,7 +314,7 @@ for(comps = 0; comps < num_comps+1; comps++){
 	var Mids = Array.apply(null, Array(2)).map(() => sampler3.get());
 		var sampler4 = new WeightedSampler2(BotFilterIndex, BotFilterWeight);
 	var Bots = Array.apply(null, Array(2)).map(() => sampler4.get());
-		var sampler5 = new WeightedSampler2(BotFilterIndex, BotFilterWeight);
+		var sampler5 = new WeightedSampler2(SupportFilterIndex, SupportFilterWeight);
 	var Supports = Array.apply(null, Array(2)).map(() => sampler5.get());
 	AllChampsIndex[0] = Tops[0]
 	AllChampsIndex[1] = Jungles[0]
@@ -340,7 +340,7 @@ for(comps = 0; comps < num_comps+1; comps++){
 				var Mids = Array.apply(null, Array(2)).map(() => sampler3.get());
 			var sampler4 = new WeightedSampler2(BotFilterIndex, BotFilterWeight);
 				var Bots = Array.apply(null, Array(2)).map(() => sampler4.get());
-			var sampler5 = new WeightedSampler2(BotFilterIndex, BotFilterWeight);
+			var sampler5 = new WeightedSampler2(SupportFilterIndex, SupportFilterWeight);
 				var Supports = Array.apply(null, Array(2)).map(() => sampler5.get());
 				AllChampsIndex[0] = Tops[0]
 				AllChampsIndex[1] = Jungles[0]
@@ -374,7 +374,7 @@ for(comps = 0; comps < num_comps+1; comps++){
 
 function makeLoLStimuli(){
 	stims = [];
-		for(i=0;i<num_comps+1;i++){
+		for(i=0;i<num_comps;i++){
 			stims.push(
 			{
 				Blue: BlueTeam[i],

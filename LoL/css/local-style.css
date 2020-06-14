@@ -282,3 +282,13 @@ button.hidden1{
 	position: relative;
 	bottom: 1300px;
 }
+
+p.err_radio{
+	position: relative;
+	bottom: 1300px;
+}
+
+div.err_slider{
+	position: relative;
+	bottom: 1300px;
+}
