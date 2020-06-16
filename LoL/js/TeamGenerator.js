@@ -132,7 +132,7 @@ var ChampArray = [
 {Name: "Varus", Image: "../_shared/images/champions/Varus.jpg"},
 {Name: "Vayne", Image: "../_shared/images/champions/Vayne.jpg"},
 {Name: "Veigar", Image: "../_shared/images/champions/Veigar.jpg"},
-{Name: "Vel'Koz", Image: "../_shared/images/champions/Vel'koz.jpg"},
+{Name: "Vel'Koz", Image: "../_shared/images/champions/Vel'Koz.jpg"},
 {Name: "Vi", Image: "../_shared/images/champions/Vi.jpg"},
 {Name: "Viktor", Image: "../_shared/images/champions/Viktor.jpg"},
 {Name: "Vladimir", Image: "../_shared/images/champions/Vladimir.jpg"},
