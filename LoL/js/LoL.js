@@ -284,18 +284,45 @@ function make_slides(f) {
 
     log_responses : function() {
       exp.data_trials.push({
-        // "trial_type" : "spread_slider",
-        "spread_response" : exp.sliderPost,
-        // "Animal" : this.stim.Animal,
-        "Format" : this.stim.Format,
-        "TraitType" : this.stim.TraitType,
-        "Fact" : this.stim.Fact,
-        // "trial_type" : "prior_knowledge",
-        "prior_response" : $('input[type=radio]:checked').val(), //if using radio buttons
-        // "Animal" : stim.Animal,
-        // "Format" : this.stim.Format,
-        // "TraitType" : this.stim.TraitType,
-        // "Fact" : this.stim.Fact
+        "blueTopIndex" : this.stim.Blue[0].Index,
+        "blueTopName" : this.stim.Blue[0].Name,
+        "blueTopPlay" : this.stim.Blue[0].Top,
+        "blueJungleIndex" : this.stim.Blue[1].Index,
+        "blueJungleName" : this.stim.Blue[1].Name,
+        "blueJunglePlay" : this.stim.Blue[1].Jungle,
+        "blueMidIndex" : this.stim.Blue[2].Index,
+        "blueMidName" : this.stim.Blue[2].Name,
+        "blueMidPlay" : this.stim.Blue[2].Mid,
+        "blueBotIndex" : this.stim.Blue[3].Index,
+        "blueBotName" : this.stim.Blue[3].Name,
+        "blueBotPlay" : this.stim.Blue[3].Bot,
+        "blueSupportIndex" : this.stim.Blue[4].Index,
+        "blueSupportName" : this.stim.Blue[4].Name,
+        "blueSupportPlay" : this.stim.Blue[4].Support,
+
+        "redTopIndex" : this.stim.Red[0].Index,
+        "redTopName" : this.stim.Red[0].Name,
+        "redTopPlay" : this.stim.Red[0].Top,
+        "redJungleIndex" : this.stim.Red[1].Index,
+        "redJungleName" : this.stim.Red[1].Name,
+        "redJunglePlay" : this.stim.Red[1].Jungle,
+        "redMidIndex" : this.stim.Red[2].Index,
+        "redMidName" : this.stim.Red[2].Name,
+        "redMidPlay" : this.stim.Red[2].Mid,
+        "redBotIndex" : this.stim.Red[3].Index,
+        "redBotName" : this.stim.Red[3].Name,
+        "redBotPlay" : this.stim.Red[3].Bot,
+        "redSupportIndex" : this.stim.Red[4].Index,
+        "redSupportName" : this.stim.Red[4].Name,
+        "redSupportPlay" : this.stim.Red[4].Support,
+        
+        "blue_excel_early" : exp.sliderPostBlue[0],
+        "blue_excel_mid" : exp.sliderPostBlue[1],
+        "blue_excel_late" : exp.sliderPostBlue[2],
+    	"red_excel_early" : exp.sliderPostRed[0],
+    	"red_excel_mid" : exp.sliderPostRed[1],
+    	"red_excel_late" : exp.sliderPostRed[2],
+        "realistic_response" : $('input[type=radio]:checked').val() //if using radio buttons
       });
     }
   });

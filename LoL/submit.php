@@ -6,7 +6,7 @@ $jsonObj = json_decode($json);
 
 if ($json != NULL && is_string($json)) {
     print("json valid writing to file");
-    $file = fopen("../../results/AdultSharedResults.json", "a+");                                                                                           
+    $file = fopen("../../results/LoLResults.json", "a+");                                                                                           
     fwrite($file, $json);
     fwrite($file, ",");
     fclose($file);
@@ -17,7 +17,7 @@ if ($json != NULL && is_string($json)) {
 else {
     // user has posted invalid JSON, handle the error
     print("json variable is null!");
-    $file = fopen("../../results/AdultSharedfailed.txt", "a+");
+    $file = fopen("../../results/LoLfailed.txt", "a+");
     foreach ($_POST as $key => $value) {
         $blah = $key. " ". $value;
         fwrite($file, $blah);

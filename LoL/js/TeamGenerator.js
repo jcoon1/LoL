@@ -1,4 +1,4 @@
-num_comps = 4
+num_comps = 20
 scale_factor = 1.4
 
 var ChampArray = [
