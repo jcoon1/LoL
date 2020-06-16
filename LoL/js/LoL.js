@@ -322,7 +322,8 @@ function make_slides(f) {
     	"red_excel_early" : exp.sliderPostRed[0],
     	"red_excel_mid" : exp.sliderPostRed[1],
     	"red_excel_late" : exp.sliderPostRed[2],
-        "realistic_response" : $('input[type=radio]:checked').val() //if using radio buttons
+        "realistic_blue" : $('input[name=realistic_blue]:checked').val(), //if using radio buttons
+        "realistic_red" : $('input[name=realistic_red]:checked').val() //if using radio buttons
       });
     }
   });
